@@ -27,7 +27,7 @@ class ContactController extends Controller
             'message' => 'required|min:5'
         ]);
 
-        Mail::to('nonsonoriuscitoacrearelamail')->send(new ContactMail($validated));
+        Mail::to('noreply@agenziacom.test')->send(new ContactMail($validated));
 
         return back()->with('success', 'Messaggio inviato con successo!');
     }
